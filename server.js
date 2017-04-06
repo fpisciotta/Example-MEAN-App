@@ -12,7 +12,6 @@ var path = require('path');
 var jwt = require('jsonwebtoken');
 var User = require(__dirname + '/server//models/user.js');
 
-
 app.use(morgan('dev')); //HTTP logger
 
 //==================================--APP--====================================
