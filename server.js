@@ -30,7 +30,7 @@ app.use(function(req,res,next){
 });
 
 //==================================--DB--====================================
-mongoose.connect('mongodb://app:myPassword@localhost/appDB');
+mongoose.connect('mongodb://54.245.206.80:27017/maindb');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
