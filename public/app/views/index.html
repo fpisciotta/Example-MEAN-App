@@ -20,8 +20,12 @@
 	<!--================================================= CSS =======================================================-->
 	    <!-- load bootstrap from CDN and custome CSS -->
 	<link rel = "stylesheet" “href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
-	<link rel="stylesheet" href="/assets/css/style">
+	<!--link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"-->
+	<!--link rel="stylesheet" href="/assets/css/style"-->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 	<!--=============================================== BOOTSTRAP ===================================================-->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -50,27 +54,344 @@
 <!--================================================ BODY ===========================================================-->
 <body ng-app="userApp" ng-controller="mainController as main">
 	<!-- NAVBAR -->
-	<header>
-		<div class = "navbar navbar-inverse">
-			<div class = "container">
-				<div class = "navbar-header">
-					<a href= "/" class ="navbar-brand"><span></span>Welcome </a>
+	<!--banner-->
+    <section id="banner">
+      <div class="bg-color">
+        <nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container">
+			  	<div class="col-md-12">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="#"><img src="../../assets/img/piatto_ricco.jpg" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+				    </div>
+				    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+				      <ul class="nav navbar-nav">
+						<li class="active"><a href="#banner">Inicio</a></li>
+				        <li ><a href="#about">Acerca de</a></li>
+				        <li class=""><a href="#event">Catering</a></li>
+				        <li class=""><a href="#menu-list">Menu</a></li>
+				        <li class=""><a href="#contact">Delivery</a></li>
+				        
+						
+                  
+                  
+                  
+				      </ul>
+				    </div>
 				</div>
-				<ul ng-if = "main.loggedIn" class = "nav navbar-nav">
-					<li><a href = "/users"><span class = "glyphicon glyphicon-user"></span> USERS</a></li>
-				</ul>
-				<ul class ="nav navbar-nav navbar-right">
-					<li ng-if = "!main.loggedIn"><a href ="/login">Login</a></li>
-					<li ng-if = "!main.loggedIn"><a href ="/users/create">Create Account</a></li>
-		<li ng-click = "main.doLogout()" ng-if = "main.loggedIn"><a href = "#">Logout</a></li>
-		</ul>
-		</div>
-		</div>
-		</header>
-		<!-- Angular-->
-		<main class = "container">
-			<!-- ANGULAR VIEWS -->
-		<div ng-view></div>
-	</main>
+			  </div>
+			</nav>
+        <div class="container">
+        <div class="row">
+          <div class="inner text-center">
+            <h1 class="logo-name">Delicioso!</h1>
+            <h2>Hecho como en casa.</h2>
+            <p>Nuestros platos llevan el calor del hogar a tu mesa</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- / banner -->	
+	<section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center marb-35">
+                    <h1 class="header-h">Piatto Ricco</h1>
+                    <p class="header-p">Somos una empresa gastronómica que intenta mantener la calidad de sus productos
+                    <br>como si lo hicieras en casa. </p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="about-info">
+                            <h2 class="heading">Filosofía</h2>
+                            <p>Queremos volver a nuestras raíces, a nuestros sabores, a explorar nuestra ríca gastronomía. Que comer afuera se sienta como en casa. Seleccionamos diriamente nuestros ingredientes y nuestro menú se actualiza constantemente. 
+							Queremos ser una oferta diferente en el mercado, que nuestros clientes aprecien la calidad y el buen gusto. Aplicamos nuestra filosofía día a día siguiendo estas premisas:</p>
+                            <div class="details-list">
+                                <ul>
+                                    <li><i class="fa fa-check"></i>Ingredientes frescos, orgánicos, adquiridos diariamente</li>
+                                    <li><i class="fa fa-check"></i>Apostamos a la cocina tradicional paraguaya, dandole un toque gourmet</li>
+                                    <li><i class="fa fa-check"></i>Actualizamos nuestro menú constantemente</li>
+                                    <li><i class="fa fa-check"></i>Seguimos las recomendaciones de nuestros clientes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <img src="../../assets/img/res01.jpg" alt="" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+    <!--/about-->
+    <!-- event -->
+    <section id="event">
+        <div class="bg-color" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center" style="padding:60px;">
+                      <h1 class="header-h">Catering</h1>
+                      <p class="header-p">Ofrecemos servicio de catering</p>
+                    </div>
+                    <div class="col-md-12" style="padding-bottom:60px;">
+                        <div class="item active left">
+                          <div class="col-md-6 col-sm-6 left-images">
+                           <img src="../../assets/img/res02.jpg" class="img-responsive">
+                         </div>
+                         <div class="col-md-6 col-sm-6 details-text">
+                          <div class="content-holder">
+                            <h2>Deliciosos bocaditos</h2>
+                            <p>Ofrecemos servicio de catering para todo tipo de eventos: babyshower, dia del trabajador, eventos especiales, inauguraciones, etc. Bocaditos dulces y salados, tenemos una variedad
+							de opciones que puede consultar llamando a nuestro número de teléfono.</p>
+                     
+                            <a class="btn btn-imfo btn-read-more" href="events-details.html">Leer más</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ event -->
+    <!-- menu -->
+    <section id="menu-list" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center marb-35">
+                    <h1 class="header-h">Menu</h1>
+                    <p class="header-p">Ofrecemos una variedad de platos, desayuno y almuerzo. Tenemos nuestro plato económico del día y lo actualizamos diariamente. </p>
+                </div>
+                <div class="col-md-12  text-center gallery-trigger">
+                    <ul>
+                        <li><a class="filter" data-filter="all">Mostrar todo</a></li>
+                        <li><a class="filter" data-filter=".category-1">Desayuno</a></li>
+                        <li><a class="filter" data-filter=".category-2">Almuerzo</a></li>
+                    </ul>
+                </div>
+                <div id="Container">
+                    <div class="mix category-1 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-1 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-1 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-1 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-2 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-2 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-2 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-2 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-3 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-3 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-3 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                    <div class="mix category-3 menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                        <span class="menu-price">$20.99</span>
+                      </span>
+                      <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ menu -->
+    <!-- contact -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="header-h">Delivery</h1>
+                    <p class="header-p">Llene el formulario, seleccione lo que desea pedir, dele click a enviar y listo!. Los pedidos se recepcionan hasta las 11.30 a.m. </p>
+                </div>
+            </div>
+            <div class="row msg-row">
+                <div class="col-md-4 col-sm-4 mr-15">
+                    <div class="media-2">
+                        <div class="media-left">
+                            <div class="contact-phone bg-1 text-center"><span class="phone-in-talk fa fa-phone"></span></div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="dark-blue regular">Teléfonos</h4>
+                            <p class="light-blue regular alt-p">+595 986 330 030 - <span class="contacts-sp">Phone Booking</span></p>
+							<p class="light-blue regular alt-p">+595 981 867 125 - <span class="contacts-sp">Phone Booking</span></p>
+							<p class="light-blue regular alt-p">+595 981 435 348 - <span class="contacts-sp">Phone Booking</span></p>
+                        </div>
+                    </div>
+                    <div class="media-2">
+                        <div class="media-left">
+                            <div class="contact-email bg-14 text-center"><span class="hour-icon fa fa-clock-o"></span></div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="dark-blue regular">Horario de atención</h4>
+                            <p class="light-blue regular alt-p"> Lunes a viernes 07.00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <form action="" method="post" role="form" class="contactForm">
+                    <div id="sendmessage">Su pedido se ha enviado. Recibirá un mensaje de texto de confirmación en su teléfono. Gracias!.</div>
+                    <div id="errormessage"></div>
+                    <div class="col-md-6 col-sm-6 contact-form pad-form">
+                        <div class="form-group label-floating is-empty">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="date" class="form-control label-floating is-empty" name="date" id="date" placeholder="Date" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form pad-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control label-floating is-empty" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="time" class="form-control label-floating is-empty" name="time" id="time" placeholder="Time" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control label-floating is-empty" name="phone" id="phone" placeholder="Phone" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control label-floating is-empty" name="people" id="people" placeholder="People" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 contact-form">
+                        <div class="form-group label-floating is-empty">
+                            <textarea class="form-control" name="message" rows="5" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-12 btnpad">
+                        <div class="contacts-btn-pad">
+                            <button class="contacts-btn">Enviar</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / contact -->
+	<!-- footer -->
+    <footer class="footer text-center">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 text-center">
+                    <div class="widget">
+                        <h4 class="widget-title">Piatto Ricco</h4>
+                        <address>República Francesa 271 c/ Eligio Ayala<br>Asunción, Paraguay</address>
+                        <div class="social-list">
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/PiattoRiccoPy/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / footer -->
+	<script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.easing.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/jquery.mixitup.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script src="../../assets/contactform/contactform.js"></script>
 </body>
 </html>
