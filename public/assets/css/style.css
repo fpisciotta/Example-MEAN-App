@@ -29,10 +29,89 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/***************************************
+banner
+***************************************/
+.navbar {
+    margin-bottom: 0px;
+    border: 0px;
+}
+.navbar {
+    border-radius: 0px;
+}
+.navbar-default {
+    background-color: #fff;
+    padding: 20px 0;
+    transition: all 0.3s;
+	height: 80px
+}
+.navbar-default {
+    background-color: transparent;
+    border: 0px;
+}
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-brand
+{
+	font-family: 'Chewy', cursive;
+	font-size: 32px;
+}
+
+.navbar-brand img {
+    padding-top: 0px;
+    width: 80px !important;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #EA6045;
+}
+
+.top-nav-collapse {
+    padding: 0; 
+    background: rgba(28,74,90, 0.9);
+}
+
+.white, .white:hover, .white:focus
+{
+	color: #fff;
+	width: 100% !important;
+}
+.block
+{
+	display: block;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(12, 184, 182, 0.21);
+}
+.navbar-default .navbar-nav > li > a
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 300;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+{
+	color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(12, 184, 182, 0.21);
+}
+.affix {
+    background-color: #ffffff !important;
+}
+.affix .navbar-nav > li > a:hover, .affix .navbar-nav > li > a:focus
+{
+    background-color: rgba(12, 184, 182) !important;
+}
 #banner{
-    background: url(../img/hecho_casa_resized.jpg) no-repeat center top;
-    background-size: cover;
-    min-height: 500px;
+	background: url(../img/hecho_casa_resized.jpg) no-repeat center top;
+	background-size: cover;
+	min-height: 630px;
+	position: relative;
 }
 .bg-color{
     background-color: RGBA(0, 0, 0, 0.61);
@@ -49,7 +128,7 @@ table {
     font-size: 34px;
 }
 .section-padding{
-    padding: 60px 0px;
+    padding: 80px 0px;
 }
 .logo-name{
     font-family: 'Satisfy', sans-serif;
@@ -130,6 +209,12 @@ table {
 }
 .bg-1 {
     background-color: #fecc17;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.bg-2 {
+    background-color: #fecc32;
     width: 70px;
     height: 70px;
     border-radius: 50%;
